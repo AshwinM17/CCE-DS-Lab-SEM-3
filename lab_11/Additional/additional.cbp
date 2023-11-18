@@ -31,7 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="expression.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="levelOrder.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

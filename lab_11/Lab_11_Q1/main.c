@@ -57,9 +57,9 @@ TreeNode* deleteNode(TreeNode* root, int key) {
             return temp;
         }
 
-        TreeNode* temp = findMinNode(root->right);
+        TreeNode* temp = findMinNode(root->right); // as we can replace a data with its inorder predecessor,which will be the min in right subtree
         root->data = temp->data;
-        root->right = deleteNode(root->right, temp->data);
+        root->right = deleteNode(root->right, temp->data);// coz temp data double ho gaya
     }
     return root;
 }
@@ -73,7 +73,8 @@ void inorderTraversal(TreeNode* root) {
 }
 TreeNode *SearchBST(int key,TreeNode *croot){
     while(croot!=NULL && croot->data!=key){
-            croot=(key<croot->data)? croot->left:croot->right;
+
+            croot=(key < croot->data)? croot->left:croot->right;
     }
     return croot;
 }
