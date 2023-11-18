@@ -118,12 +118,12 @@ void IterativeInorder(Tptr node)
 {
     while(true)
     {
-        for(; node;node = node->leftchild)//push all left child
+        for(; node;node = node->leftchild) //push all left child
         {
             Push(node);
         }
         node = Pop();
-        if(node == NULL)
+        if(node == NULL)//i.e stack is empty
         {
             break;
         }
@@ -155,16 +155,16 @@ void IterativePreorder(Tptr node)
 //print node elements in postorder
 void IterativePostorder(Tptr node)
 {
-    for(;;)
+    while (true)
     {
-        if(node)
+        if(node)// push all leftchild
         {
             Push(node);
             node = node->leftchild;
         }
         else
         {
-            if(!peek())
+            if(!peek()) //stack is empty
             {
                 break;
             }
