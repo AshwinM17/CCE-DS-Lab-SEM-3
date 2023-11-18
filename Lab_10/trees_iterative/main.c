@@ -169,17 +169,17 @@ void IterativePostorder(Tptr node)
                 break;
             }
             Tptr temp = peek()->rightchild;
-            if(temp==NULL)
+            if(temp==NULL)//i.e doesn't exist
             {
                 temp = Pop();
                 printf("%d",temp->data);
-                while(!isEmpty() && temp==peek()->rightchild)
+                while(!isEmpty() && temp==peek()->rightchild)//only when temp is the right child of the top
                 {
-                    temp = Pop();
+                    temp = Pop();//extra pop if it is the rughtchild
                     printf("%d ",temp->data);
                 }
             }
-            else
+            else //i.e if right child of the top of stack exists push it and its left child to stack
             {
                 node = temp;
             }
