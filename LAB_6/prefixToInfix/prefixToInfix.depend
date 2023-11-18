@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1695401312 source:d:\220953128\30_10_23\try\lab_6\prefixtoinfix\pretoin.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"stringStack.h"
+
+1695401312 d:\220953128\30_10_23\try\lab_6\prefixtoinfix\stringstack.h
+	<stdbool.h>
+	<string.h>
+
+1699036699 source:c:\users\mitta\desktop\ashwin\college\sem_3\data structures\ds backup(codes)\data structures(31_10_23)\try\lab_6\prefixtoinfix\pretoin.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"stringStack.h"
+
+1699018320 c:\users\mitta\desktop\ashwin\college\sem_3\data structures\ds backup(codes)\data structures(31_10_23)\try\lab_6\prefixtoinfix\stringstack.h
+	<stdbool.h>
+	<string.h>
+

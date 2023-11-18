@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1693285746 source:d:\220953128\lab_4\circular_queues\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1693830624 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_4\circular_queues\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

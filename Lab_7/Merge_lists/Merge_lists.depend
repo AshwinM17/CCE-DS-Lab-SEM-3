@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1698676025 source:c:\users\mitta\desktop\ashwin\college\sem_3\data structures\ds backup(codes)\data structures\lab_7\merge_lists\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

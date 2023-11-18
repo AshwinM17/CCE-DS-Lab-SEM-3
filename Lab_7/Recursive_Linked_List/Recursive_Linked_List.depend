@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1698674900 source:c:\users\mitta\desktop\ashwin\college\sem_3\data structures\lab\lab_7\recursive_linked_list\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

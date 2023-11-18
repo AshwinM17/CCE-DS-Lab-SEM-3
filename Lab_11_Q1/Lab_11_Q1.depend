@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1699331276 source:d:\ash_220953096\lab_11\lab_11_q1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+
+1699464491 source:c:\users\mitta\desktop\ashwin\college\sem_3\data structures\ds backup(codes)\data structures(31_10_23)\try\lab_11_q1\main.c
+	<stdio.h>
+	<stdlib.h>
+

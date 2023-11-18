@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1693891409 source:d:\220953128\lab_5\postfixeval\stack.c
+	"stack.h"
+
+1693891142 d:\220953128\lab_5\postfixeval\stack.h
+	<stdbool.h>
+
+1693892259 source:d:\220953128\lab_5\postfixeval\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+	<string.h>
+	<ctype.h>
+	<math.h>
+
+1694209123 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_5\postfixeval\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+	<string.h>
+	<ctype.h>
+	<math.h>
+
+1694191567 c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_5\postfixeval\stack.h
+	<stdbool.h>
+
+1694209016 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_5\postfixeval\stack.c
+	"stack.h"
+

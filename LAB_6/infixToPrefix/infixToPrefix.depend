@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1694492399 source:d:\220953138\lab_6\intopre\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"charStack.h"
+
+1693892198 d:\220953138\lab_6\intopre\charstack.h
+	<stdbool.h>
+
+1694493010 source:d:\220953138\lab_6\infixtoprefix\intopre.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"charStack.h"
+
+1693892198 d:\220953138\lab_6\infixtoprefix\charstack.h
+	<stdbool.h>
+
+1695446311 source:c:\users\mitta\desktop\ashwin\college\sem_3\data structures\lab\codesas\lab_6\infixtoprefix\intopre.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"charStack.h"
+
+1695446311 c:\users\mitta\desktop\ashwin\college\sem_3\data structures\lab\codesas\lab_6\infixtoprefix\charstack.h
+	<stdbool.h>
+
+1699018319 source:c:\users\mitta\desktop\ashwin\college\sem_3\data structures\ds backup(codes)\data structures(31_10_23)\try\lab_6\infixtoprefix\intopre.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	"charStack.h"
+
+1699018319 c:\users\mitta\desktop\ashwin\college\sem_3\data structures\ds backup(codes)\data structures(31_10_23)\try\lab_6\infixtoprefix\charstack.h
+	<stdbool.h>
+

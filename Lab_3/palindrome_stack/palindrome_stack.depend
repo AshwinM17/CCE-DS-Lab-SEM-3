@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1692682203 source:d:\220953128\lab_3\palindrome_stack\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+
+1692682665 d:\220953128\lab_3\palindrome_stack\stack.h
+	<stdbool.h>
+
+1692683613 source:d:\220953128\lab_3\palindrome_stack\stack.c
+	"stack.h"
+
+1693329014 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_3\palindrome_stack\stack.c
+	"stack.h"
+
+1693329353 c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_3\palindrome_stack\stack.h
+	<stdbool.h>
+

@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1693888142 source:d:\220953128\new folder\infix_postfix\stack.c
+	"stack.h"
+
+1693886542 d:\220953128\new folder\infix_postfix\stack.h
+	<stdbool.h>
+
+1693889225 source:d:\220953128\new folder\infix_postfix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+	<ctype.h>
+	<string.h>
+
+1693889225 source:d:\220953128\lab_5\infix_postfix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+	<ctype.h>
+	<string.h>
+
+1693886542 d:\220953128\lab_5\infix_postfix\stack.h
+	<stdbool.h>
+
+1693888142 source:d:\220953128\lab_5\infix_postfix\stack.c
+	"stack.h"
+
+1694206616 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_5\infix_postfix\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+	<ctype.h>
+	<string.h>
+
+1694204924 c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_5\infix_postfix\stack.h
+	<stdbool.h>
+
+1694206780 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_5\infix_postfix\stack.c
+	"stack.h"
+

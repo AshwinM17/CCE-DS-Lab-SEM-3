@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1693233158 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_3\decimal_converter\stack.c
+	"stack.h"
+
+1693232503 c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_3\decimal_converter\stack.h
+	<stdbool.h>
+
+1693233355 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_3\decimal_converter\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+

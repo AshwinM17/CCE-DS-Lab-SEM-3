@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1698688615 source:c:\users\mitta\desktop\ashwin\college\sem_3\data structures\ds backup(codes)\data structures\lab_8\union_intersection_ll\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+

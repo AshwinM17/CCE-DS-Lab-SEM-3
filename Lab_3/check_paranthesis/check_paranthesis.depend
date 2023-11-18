@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1693282254 source:d:\220953128\lab_3\check_paranthesis\stack.c
+	"stack.h"
+
+1693282527 d:\220953128\lab_3\check_paranthesis\stack.h
+	<stdbool.h>
+
+1693283483 source:d:\220953128\lab_3\check_paranthesis\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+
+1694430749 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_3\check_paranthesis\main.c
+	<stdio.h>
+	<stdlib.h>
+	"stack.h"
+
+1693328945 c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_3\check_paranthesis\stack.h
+	<stdbool.h>
+
+1693328945 source:c:\users\mitta\desktop\ashwin\college\sem 3\data structures\lab\lab_3\check_paranthesis\stack.c
+	"stack.h"
+
