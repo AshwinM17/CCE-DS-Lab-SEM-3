@@ -38,20 +38,28 @@ TreeNode* findMinNode(TreeNode* root) {
 }
 
 TreeNode* deleteNode(TreeNode* root, int key) {
-    if (root == NULL) {
+    if (root == NULL)
+    {
         return root;
     }
-
-    if (key < root->data) {
+    if (key < root->data)
+    {
         root->left = deleteNode(root->left, key);
-    } else if (key > root->data) {
+    }
+    else if (key > root->data)
+    {
         root->right = deleteNode(root->right, key);
-    } else {
-        if (root->left == NULL) {
+    }
+    else
+    {
+        if (root->left == NULL)
+        {
             TreeNode* temp = root->right;
             free(root);
             return temp;
-        } else if (root->right == NULL) {
+        }
+        else if (root->right == NULL)
+        {
             TreeNode* temp = root->left;
             free(root);
             return temp;

@@ -199,7 +199,7 @@ Tptr ParentNode(Tptr node, int target) {
     if ((node->leftchild && node->leftchild->data == target) || (node->rightchild && node->rightchild->data == target)) {
         return node;
     }
-
+    //return left if not null(returned) else return right
     Tptr left = ParentNode(node->leftchild, target);
     if (left != NULL) {
         return left;
@@ -246,6 +246,7 @@ int printAncestors(Tptr root, int target) {
 
     // If the target value is found in either the left or right subtree,
     // print the current node and return 1 to indicate the presence of the target.
+    // this propogates t print all ancestors
     if (printAncestors(root->leftchild, target) || printAncestors(root->rightchild, target)) {
         printf("%d ", root->data);
         return 1;

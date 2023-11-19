@@ -12,7 +12,7 @@ typedef struct TNode
     Tptr leftchild;
     Tptr rightchild;
 }TNode;
-/*
+///*
 //Create nodes in the tree
 Tptr createNode(char val)
 {
@@ -21,7 +21,7 @@ Tptr createNode(char val)
     temp->leftchild = temp->rightchild = NULL;
     return temp;
 }
-*/
+//*/
 
 Tptr stack[MAX];
 int top=-1;
@@ -109,7 +109,7 @@ void inOrderTraversal(Tptr root)
     }
 }
 
-int mainc()
+int main()
 {
     char postfix[] = "ab*cd/-";
     Tptr expressionTree = createExpression(postfix);

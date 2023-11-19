@@ -35,7 +35,7 @@ void enqueue(element e){
     }
 }
 
-///*
+/*
 //Create nodes in the tree
 Tptr createNode(int val)
 {
@@ -44,7 +44,7 @@ Tptr createNode(int val)
     temp->leftchild = temp->rightchild = NULL;
     return temp;
 }
-//*/
+*/
 //create the binary search tree
 void createBST(Tptr *root)
 {
@@ -120,7 +120,7 @@ void levelOrderTraversal(Tptr current) {
     }
 }
 
-int main() {
+int mainc() {
     Tptr root = NULL;
 
     createBST(&root);
