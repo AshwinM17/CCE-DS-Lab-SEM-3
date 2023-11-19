@@ -1,19 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct Node 
+typedef struct Node
 {
     int vertex;
     struct Node* next;
 } Node;
 
-typedef struct Graph 
+typedef struct Graph
 {
     int vertices;
     Node** adjList;
 } Graph;
 
-Node* createNode(int vertex) 
+Node* createNode(int vertex)
 {
     Node* newNode = (Node*)malloc(sizeof(Node));
     newNode->vertex = vertex;
@@ -21,7 +21,7 @@ Node* createNode(int vertex)
     return newNode;
 }
 
-Graph* createGraph(int vertices) 
+Graph* createGraph(int vertices) //vertices is the number of vertices
 {
     Graph* graph = (Graph*)malloc(sizeof(Graph));
     graph->vertices = vertices;
@@ -31,7 +31,7 @@ Graph* createGraph(int vertices)
     return graph;
 }
 
-void addEdgeUndirected(Graph* graph, int start, int end) 
+void addEdgeUndirected(Graph* graph, int start, int end)
 {
     Node* newNode = createNode(end);
     newNode->next = graph->adjList[start];
@@ -41,20 +41,20 @@ void addEdgeUndirected(Graph* graph, int start, int end)
     graph->adjList[end] = newNode;
 }
 
-void addEdgeDirected(Graph* graph, int start, int end) 
+void addEdgeDirected(Graph* graph, int start, int end)
 {
     Node* newNode = createNode(end);
     newNode->next = graph->adjList[start];
     graph->adjList[start] = newNode;
 }
 
-void displayGraph(Graph* graph) 
+void displayGraph(Graph* graph)
 {
-    for (int i = 0; i < graph->vertices; i++) 
+    for (int i = 0; i < graph->vertices; i++)
     {
         Node* current = graph->adjList[i];
         printf("Adjacency list for vertex %d: ", i);
-        while (current != NULL) 
+        while (current != NULL)
         {
             printf("%d -> ", current->vertex);
             current = current->next;
@@ -73,7 +73,7 @@ int main() {
     printf("Enter the number of edges: ");
     scanf("%d", &edges);
     printf("Enter the edges (start and end vertex) separated by space:\n");
-    for (i = 0; i < edges; i++) 
+    for (i = 0; i < edges; i++)
     {
         scanf("%d %d", &start, &end);
         if (isDirected)
