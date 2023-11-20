@@ -167,6 +167,7 @@ void delete_str(char str[],char substr[])
                 break;
             }
         }
+
         if (flag==1)
         {
             for(j=i+len2;j<=len1;j++)

@@ -58,7 +58,6 @@ void delend()
     }
     else
     {
-
         tail->prev->next=NULL;
         tail=tail->prev;
     }

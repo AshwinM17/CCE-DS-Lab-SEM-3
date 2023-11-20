@@ -51,7 +51,7 @@ nptr merge(nptr xHead , nptr yHead)
     int i;
     nptr yCurrent = yHead;
     nptr xCurrent = xHead;
-    nptr mCurrent = xCurrent;
+    nptr mCurrent = xHead;
     mHead = mCurrent;
     xCurrent = xCurrent->next;
     //appennd alternate nodes to list
@@ -60,6 +60,7 @@ nptr merge(nptr xHead , nptr yHead)
         mCurrent->next = yCurrent;
         yCurrent = yCurrent->next;
         mCurrent = mCurrent->next;
+
         mCurrent->next = xCurrent;
         xCurrent = xCurrent->next;
         mCurrent = mCurrent->next;
@@ -76,6 +77,7 @@ nptr merge(nptr xHead , nptr yHead)
 
 int main()
 {
+    //xHead is the smaller array from both
     // Create and populate the first linked list (xHead)
     nptr xHead=NULL;
     insertEnd(&xHead,100);

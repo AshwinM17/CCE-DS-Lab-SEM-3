@@ -52,6 +52,7 @@ void attach(int coeff,int expo,pptr* rear)
     temp->coeff = coeff;
     temp->expo = expo;
     temp->next = NULL;
+
     (*rear)->next = temp;
     *rear = temp;
 }
