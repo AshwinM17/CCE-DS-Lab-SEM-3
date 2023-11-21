@@ -49,7 +49,7 @@ void createTree(int N)
             scanf("%s",dir);
             current = root;
             previous = NULL;
-            for(dIndex=0;dir[dIndex]!='\0' && current!=NULL;dIndex++)
+            for(dIndex=0; dir[dIndex]!='\0'&&current!=NULL ; dIndex++)
             {
                 previous = current;
                 if(dir[dIndex]=='L'||dir[dIndex]=='l')
@@ -207,7 +207,7 @@ Tptr ParentNode(Tptr node, int target) {
 
     return ParentNode(node->rightchild, target);
 }
-
+//both give correct for count nodes
 void countnodes(TNode* root,int *count)
 {
     if(root)
@@ -215,6 +215,20 @@ void countnodes(TNode* root,int *count)
         (*count)++;
         countnodes(root->leftchild,count);
         countnodes(root->rightchild,count);
+    }
+}
+
+int cntnodes(TNode* node)
+{
+    if(!node)
+    {
+        return 0;
+    }
+    else
+    {
+        int right=cntnodes(node->rightchild);
+        int left=cntnodes(node->leftchild);
+        return left+right+1;
     }
 }
 //Find the depth of a given tree
@@ -225,7 +239,6 @@ int maxDepth(Tptr root) {
         // Compute the depth of each subtree
         int leftDepth = maxDepth(root->leftchild);
         int rightDepth = maxDepth(root->rightchild);
-
         // Return the greater depth of the two subtrees plus 1 for the current node
         return (leftDepth > rightDepth) ? (leftDepth + 1) : (rightDepth + 1);
     }
@@ -313,8 +326,7 @@ int main()
                 printf("Enter the number of nodes: ");
                 scanf("%d", &N);
                 createTree(N);
-                int count=0;
-                countnodes(root,&count);
+                int count=cntnodes(root);
                 printf("Number of nodes %d\n",count);
 
                 break;

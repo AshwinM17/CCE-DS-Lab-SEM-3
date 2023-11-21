@@ -36,6 +36,7 @@ void addEdgeUndirected(Graph* graph, int start, int end)
     Node* newNode = createNode(end);
     newNode->next = graph->adjList[start];
     graph->adjList[start] = newNode;
+
     newNode = createNode(start);
     newNode->next = graph->adjList[end];
     graph->adjList[end] = newNode;
