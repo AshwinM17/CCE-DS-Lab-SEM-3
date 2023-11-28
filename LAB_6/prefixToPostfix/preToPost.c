@@ -43,6 +43,7 @@ void convert(char* prefix)
         else
         {
             printf("invalid");
+            return;
         }
     }
     printf("%s",Pop().key);

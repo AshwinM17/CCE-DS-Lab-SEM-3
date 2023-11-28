@@ -19,3 +19,13 @@
 	<stdbool.h>
 	<string.h>
 
+1699018318 source:c:\users\mitta\desktop\ashwin\college\sem_3\data structures\ds backup(codes)\data structures(31_10_23)\cce-ds-lab-sem-3\lab_6\prefixtopostfix\pretopost.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	"stringStack.h"
+
+1699018319 c:\users\mitta\desktop\ashwin\college\sem_3\data structures\ds backup(codes)\data structures(31_10_23)\cce-ds-lab-sem-3\lab_6\prefixtopostfix\stringstack.h
+	<stdbool.h>
+	<string.h>
+

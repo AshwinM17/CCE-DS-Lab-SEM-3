@@ -2,7 +2,6 @@
 #include <stdlib.h>
 int binsearch(int arr[],int low,int high,int element)
 {
-    int mid;
     if (high>=low)
     {
         int mid=(low+high)/2;
@@ -25,7 +24,7 @@ int binsearch(int arr[],int low,int high,int element)
 }
 int main()
 {
-    int element=8,n;
+    int n;
     printf("Enter the number of elements in the list\n");
     scanf("%d",&n);
     int list[n],i;

@@ -5,7 +5,7 @@ int main()
 {
     enum bracket{flw,par,sqr,ang};
     //enum bracket bkt; what is the need
-    char exp[100];
+    char exp[100] ;
     printf("Enter the expression\n");
     scanf("%s",exp);
     int i;
@@ -91,7 +91,7 @@ int main()
     if(flag)
     {
 
-        printf("Valid Exprression");
+        printf("Valid Expression");
     }
     else
         printf("Error:Invalid Expression");
