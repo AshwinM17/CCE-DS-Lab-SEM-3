@@ -72,10 +72,6 @@ nptr add(nptr num1, nptr num2)
 
 int main()
 {
-
-
-    //incorrect code
-
     nptr num1 = NULL;
     nptr num2 = NULL;
 

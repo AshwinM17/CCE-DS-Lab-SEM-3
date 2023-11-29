@@ -244,7 +244,7 @@ void reverse()
 
 void main()
 {
-    printf("%f",(pow(3.0,2.0)));
+    printf("%f",(pow(3,2)));
     insertend(1);
     insertend(2);
     insertend(3);
@@ -253,8 +253,11 @@ void main()
     traverse();
     delend();
     traverse();
+    printf("DSIJD\n");
+
     insertpos(44,5);// case of end not working,now working
     traverse();
+
     deletePosition(3);
     traverse();
     insertBefore(77,3);

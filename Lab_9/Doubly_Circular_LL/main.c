@@ -8,6 +8,7 @@ typedef struct cnode
     cnptr prev;
 }cnode;
 cnptr last=NULL;
+
 cnptr createCnode(int val)
 {
     cnptr temp=(cnptr)malloc(sizeof(cnode));

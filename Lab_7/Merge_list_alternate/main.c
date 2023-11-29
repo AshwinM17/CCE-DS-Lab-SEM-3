@@ -77,7 +77,7 @@ nptr merge(nptr xHead , nptr yHead)
 
 int main()
 {
-    //xHead is the smaller array from both
+    //yHead is the smaller array from both
     // Create and populate the first linked list (xHead)
     nptr xHead=NULL;
     insertEnd(&xHead,100);

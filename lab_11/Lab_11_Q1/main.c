@@ -40,7 +40,7 @@ TreeNode* findMinNode(TreeNode* root) {
 TreeNode* deleteNode(TreeNode* root, int key) {
     if (root == NULL)
     {
-        return root;
+        return NULL;
     }
     if (key < root->data)
     {
@@ -50,7 +50,7 @@ TreeNode* deleteNode(TreeNode* root, int key) {
     {
         root->right = deleteNode(root->right, key);
     }
-    else
+    else//root is found
     {
         if (root->left == NULL)
         {
@@ -86,6 +86,7 @@ TreeNode *SearchBST(int key,TreeNode *croot){
     }
     return croot;
 }
+
 int main() {
     TreeNode* root = NULL;
     int choice, value;

@@ -45,7 +45,7 @@ void insertEnd(int coeff,int expo,pptr* head)
 }
 
 
-void attach(int coeff,int expo,pptr* rear)
+void attach(int coeff,int expo,pptr* rear)//we do *rear as we pdate the rear and ,=move it forword otherwise we didi not need to change it if only rear ke aage add karna hota
 {
     pptr temp;
     temp = (pptr)malloc(sizeof(pnode));

@@ -24,14 +24,14 @@ Node* createNode(int vertex)
 Graph* createGraph(int vertices) //vertices is the number of vertices
 {
     Graph* graph = (Graph*)malloc(sizeof(Graph));
-    graph->vertices = vertices;
-    graph->adjList = (Node**)malloc(vertices * sizeof(Node*));
+    graph->vertices = vertices;// no of vertices bataye
+    graph->adjList = (Node**)malloc(vertices * sizeof(Node*));//adjlist ko sahi size diya ie saare vertices
     for (int i = 0; i < vertices; i++)
-        graph->adjList[i] = NULL;
+        graph->adjList[i] = NULL;//default setup
     return graph;
 }
 
-void addEdgeUndirected(Graph* graph, int start, int end)
+void addEdgeUndirected(Graph* graph, int start, int end)//inset begin of nodes
 {
     Node* newNode = createNode(end);
     newNode->next = graph->adjList[start];

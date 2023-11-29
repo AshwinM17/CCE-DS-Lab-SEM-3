@@ -118,9 +118,10 @@ void IterativeInorder(Tptr node)
 {
     while(true)
     {
-        for(; node;node = node->leftchild) //push all left child
+        while(node) //push all left child
         {
             Push(node);
+            node = node->leftchild
         }
         node = Pop();
         if(node == NULL)//i.e stack is empty
