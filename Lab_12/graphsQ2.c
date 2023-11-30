@@ -10,7 +10,7 @@ typedef struct Node
 typedef struct Graph
 {
     int vertices;
-    Node** adjList;
+    Node** adjList;//array of ll
 } Graph;
 
 Node* createNode(int vertex)
