@@ -50,7 +50,7 @@ TreeNode* deleteNode(TreeNode* root, int key) {
     {
         root->right = deleteNode(root->right, key);
     }
-    else//root is found
+    else // root is found
     {
         if (root->left == NULL)
         {
@@ -65,9 +65,9 @@ TreeNode* deleteNode(TreeNode* root, int key) {
             return temp;
         }
 
-        TreeNode* temp = findMinNode(root->right); // as we can replace a data with its inorder predecessor,which will be the min in right subtree
+        TreeNode* temp = findMinNode(root->right);
         root->data = temp->data;
-        root->right = deleteNode(root->right, temp->data);// coz temp data double ho gaya
+        root->right = deleteNode(root->right, temp->data);
     }
     return root;
 }
@@ -79,24 +79,38 @@ void inorderTraversal(TreeNode* root) {
         inorderTraversal(root->right);
     }
 }
-TreeNode *SearchBST(int key,TreeNode *croot){
-    while(croot!=NULL && croot->data!=key){
 
-            croot=(key < croot->data)? croot->left:croot->right;
+// Modify the Search function to include position tracking
+int SearchBST(TreeNode *root, int key, int *position) {
+    if (root == NULL) {
+        return 0; // Not found
     }
-    return croot;
+
+    int leftCount = SearchBST(root->left, key, position);
+    if (leftCount) {
+        return leftCount; // If found in left subtree
+    }
+
+    (*position)++; // Increment position for the current node
+    if (root->data == key) {
+        return *position; // Key found, return position
+    }
+
+    return SearchBST(root->right, key, position); // Search in right subtree
 }
 
 int main() {
     TreeNode* root = NULL;
     int choice, value;
 
+    printf("Elements are added to the tree in an inorder sequence.");
+
     while (1) {
         printf("\nMenu:\n");
         printf("1. Insert a value\n");
         printf("2. Delete a value\n");
         printf("3. Search a value\n");
-        printf("4. Display tree(inorder traversal)\n");
+        printf("4. Display the Tree (inorder traversal)\n");
         printf("5. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
@@ -113,12 +127,20 @@ int main() {
                 scanf("%d", &value);
                 root = deleteNode(root, value);
                 break;
-            case 3:
+
+            case 3: {
                 printf("Enter the element to search: ");
                 scanf("%d", &value);
-                TreeNode *temp=SearchBST(value,root);
-                (temp!=NULL)? printf("Key found!"):printf("Key not found");
+                int position = 0;
+                int foundPosition = SearchBST(root, value, &position);
+                if (foundPosition) {
+                    printf("Key found at position: %d\n", foundPosition);
+                } else {
+                    printf("Key not found\n");
+                }
                 break;
+            }
+
             case 4:
                 printf("Inorder traversal: ");
                 inorderTraversal(root);
@@ -126,7 +148,6 @@ int main() {
                 break;
 
             case 5:
-                // Clean up and exit
                 free(root); // Release memory
                 exit(0);
 
