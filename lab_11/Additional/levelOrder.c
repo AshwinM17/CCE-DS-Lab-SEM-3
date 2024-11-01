@@ -3,124 +3,126 @@
 #define MAX 100
 
 typedef struct TNode *Tptr;
-typedef struct TNode
-{
+typedef struct TNode {
     int data;
     Tptr leftchild;
     Tptr rightchild;
-}TNode;
+} TNode;
 
-typedef struct{
+typedef struct {
     Tptr key;
-}element;
+} element;
 
 element Q[MAX];
-int r=-1;
-int f=-1;
+int r = -1;
+int f = -1;
 
-element dequeue(){
-    element ret;
-    ret.key =NULL;
-    if(f!=r){
+element dequeue() {
+    element ret = {NULL};
+    if (f != r) {
         f++;
         ret = Q[f];
     }
     return ret;
 }
 
-void enqueue(element e){
-    if(r<MAX){
+void enqueue(element e) {
+    if (r < MAX - 1) {  // Check if the queue is not full
         r++;
-        Q[r]= e;
+        Q[r] = e;
+    } else {
+        printf("Queue is full\n");
     }
 }
 
-/*
-//Create nodes in the tree
-Tptr createNode(int val)
-{
-    Tptr temp =(Tptr)malloc(sizeof(TNode));
-    temp->data = val;
-    temp->leftchild = temp->rightchild = NULL;
+// Create nodes in the tree
+Tptr createNode(int val) {
+    Tptr temp = (Tptr)malloc(sizeof(TNode));
+    if (temp) {
+        temp->data = val;
+        temp->leftchild = temp->rightchild = NULL;
+    }
     return temp;
 }
-*/
-//create the binary search tree
-void createBST(Tptr *root)
-{
+
+// Create the binary search tree
+void createBST(Tptr *root) {
     int N, i, val;
     Tptr current, previous;
+
     printf("Enter the number of nodes: ");
     scanf("%d", &N);
-    for (i = 0; i < N; i++)
-    {
+
+    for (i = 0; i < N; i++) {
         printf("Enter a unique value: ");
         scanf("%d", &val);
+
         Tptr temp = createNode(val);
-        if (!*root)
-        {
-            *root = temp;
+        if (!temp) {
+            printf("Memory allocation failed\n");
+            return;
         }
-        else
-        {
+
+        if (!*root) {
+            *root = temp;
+        } else {
             current = *root;
             previous = NULL;
-            while (current)
-            {
+            int isDuplicate = 0; // Flag for duplicate
+
+            while (current) {
                 previous = current;
-                if (val < current->data)
-                {
+                if (val < current->data) {
                     current = current->leftchild;
-                }
-                else if (val > current->data)
-                {
+                } else if (val > current->data) {
                     current = current->rightchild;
-                }
-                if (val == previous->data)
-                {
-                    printf("Duplicate\n");
-                    free(temp);
-                    return;
+                } else {
+                    printf("Duplicate. Will only be printed for first occurence.\n");
+                    isDuplicate = 1; // Set flag if duplicate found
+                    break; // Exit loop
                 }
             }
-            if (val < previous->data)
-            {
-                previous->leftchild = temp;
-            }
-            else
-            {
-                previous->rightchild = temp;
+
+            if (!isDuplicate) {
+                if (val < previous->data) {
+                    previous->leftchild = temp;
+                } else {
+                    previous->rightchild = temp;
+                }
+            } else {
+                free(temp); // Free memory for duplicate node
             }
         }
     }
 }
 
-//print in level order
+// Print in level order
 void levelOrderTraversal(Tptr current) {
     if (current == NULL) {
         return;
     }
+
     element b;
     b.key = current;
     enqueue(b);
 
-    while (f != r) { // i.e is not empty
-        Tptr current = dequeue().key;
-        printf("%d ", current->data);
+    while (f != r) { // While the queue is not empty
+        Tptr currentNode = dequeue().key;
+        printf("%d ", currentNode->data);
 
-        if (current->leftchild != NULL) {
-            b.key = current->leftchild;
+        if (currentNode->leftchild != NULL) {
+            b.key = currentNode->leftchild;
             enqueue(b);
         }
 
-        if (current->rightchild != NULL) {
-            b.key = current->rightchild;
+        if (currentNode->rightchild != NULL) {
+            b.key = currentNode->rightchild;
             enqueue(b);
         }
     }
 }
 
-int mainc() {
+int main() {
     Tptr root = NULL;
 
     createBST(&root);
