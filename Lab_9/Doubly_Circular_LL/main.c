@@ -79,7 +79,7 @@ int main()
     int choice;
     while(contin=='y')
     {
-        printf("What do you want to do?1 for inserting at begin,2)for deleting end,3 for traversing\n");
+        printf("What do you want to do? \n 1. For inserting at beginning \n 2. For deleting at the end. \n 3. For traversing the doubly LL\n");
         scanf("%d",&choice);
         switch(choice)
         {
