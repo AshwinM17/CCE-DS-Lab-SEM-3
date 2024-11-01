@@ -113,40 +113,53 @@ pptr polyAdd(pptr A,pptr B)
 
 int main()
 {
-    pptr A,B;
+    pptr A, B;
     A = B = NULL;
-    insertEnd(3,3,&A);
-    insertEnd(4,2,&A);
-    insertEnd(1,0,&A);
+
+    insertEnd(3, 3, &A);
+    insertEnd(4, 2, &A);
+    insertEnd(1, 0, &A);
+
     pptr current = A;
-    printf("1st Polynomial separated by commas is:\n");
-    while(current)
-    {
-        printf("%dx^%d,",current->coeff,current->expo);
+    printf("1st Polynomial is: ");
+    if (current) {
+        printf("%dx^%d", current->coeff, current->expo);
+        current = current->next;
+    }
+    while (current) {
+        printf(" + %dx^%d", current->coeff, current->expo);
         current = current->next;
     }
     printf("\n");
 
-    insertEnd(6,4,&B);
-    insertEnd(5,2,&B);
-    insertEnd(4,1,&B);
+    insertEnd(6, 4, &B);
+    insertEnd(5, 2, &B);
+    insertEnd(4, 1, &B);
+
     current = B;
-    printf("2nd Polynomial separated by commas is:\n");
-    while(current)
-    {
-        printf("%dx^%d,",current->coeff,current->expo);
+    printf("2nd Polynomial is: ");
+    if (current) {
+        printf("%dx^%d", current->coeff, current->expo);
+        current = current->next;
+    }
+    while (current) {
+        printf(" + %dx^%d", current->coeff, current->expo);
         current = current->next;
     }
     printf("\n");
 
-
-    pptr C = polyAdd(A,B);
+    pptr C = polyAdd(A, B);
     current = C;
-    printf("Added Polynomial separated by commas is:\n");
-    while(current)
-    {
-        printf("%dx^%d,",current->coeff,current->expo);
+    printf("Added Polynomial is: ");
+    if (current) {
+        printf("%dx^%d", current->coeff, current->expo);
         current = current->next;
     }
+    while (current) {
+        printf(" + %dx^%d", current->coeff, current->expo);
+        current = current->next;
+    }
+    printf("\n");
+
     return 0;
 }
