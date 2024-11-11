@@ -43,6 +43,7 @@ void insertBegin(int val, char nam[])
 
 void deleteend()
 {
+    cnptr current;
     if (last == NULL)
     {
         printf("Queue is empty\n");
@@ -68,11 +69,12 @@ void traverse()
         return;
     }
 
-    cnptr current = last->next;
+
+    cnptr current = last->next; // Start from the head (first node)
     do {
-        printf("%s (%d mins) ", current->name, current->data); // Print name AND time
+        printf("%s ", current->name);
         current = current->next;
-    } while (current != last->next);
+    } while (current != last->next); // Stop when we circle back to the head
 
     printf("\n");
 }

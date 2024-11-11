@@ -98,7 +98,7 @@ int main() {
     Node* poly2 = NULL;
     Node* result = NULL;
 
-    // Example: Polynomial 1: 3x^2 + 2x + 1, Polynomial 2: 2x^1 + 4
+    // Example: Polynomial 1: 5x^2 + 2x + 10, Polynomial 2: 2x^1 + 4
     poly1 = insertTerm(poly1, 5, 2);
     poly1 = insertTerm(poly1, 2, 1);
     poly1 = insertTerm(poly1, 10, 0);

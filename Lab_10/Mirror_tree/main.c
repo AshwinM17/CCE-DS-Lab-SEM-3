@@ -27,7 +27,7 @@ int areMirror(Node* tree1, Node* tree2) {
         return 1;
     }
 
-    //  one tree empty, not mirror
+    // one tree empty, not mirror
     if (tree1 == NULL || tree2 == NULL) {
         return 0;
     }
@@ -36,6 +36,16 @@ int areMirror(Node* tree1, Node* tree2) {
     return (tree1->data == tree2->data) &&
            areMirror(tree1->left, tree2->right) &&
            areMirror(tree1->right, tree2->left);
+}
+
+// Function to print the tree in-order
+void printTree(Node* root) {
+    if (root == NULL) {
+        return;
+    }
+    printTree(root->left);
+    printf("%d ", root->data);
+    printTree(root->right);
 }
 
 int main() {
@@ -50,6 +60,14 @@ int main() {
     root2->right = createNode(2);
     root2->right->left = createNode(5);
     root2->right->right = createNode(4);
+
+    printf("Tree 1 (In-Order): ");
+    printTree(root1);
+    printf("\n");
+
+    printf("Tree 2 (In-Order): ");
+    printTree(root2);
+    printf("\n");
 
     if (areMirror(root1, root2)) {
         printf("The trees are mirror images.\n");
