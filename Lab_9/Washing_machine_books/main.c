@@ -69,6 +69,7 @@ void traverse()
         return;
     }
 
+
     cnptr current = last->next; // Start from the head (first node)
     do {
         printf("%s ", current->name);
